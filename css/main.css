@@ -10,6 +10,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   font: normal 100%/1.3 sans-serif;
+  box-sizing: border-box;
 }
 
 *, *::before, *::after {
@@ -33,6 +34,10 @@ body {
   padding-bottom: 1.25em;
 }
 
+.card {
+  display: block;
+}
+
 .card-img img {
   width: 50px;
 }
@@ -52,10 +57,54 @@ body {
   .card-img {
     display: inline-block;
     transform: none;
+    padding-bottom: 1.2em;
   }
 
   .card-body {
     display: inline-block;
     width: 20rem;
+    padding: .4em 0 0 .4em;
+  }
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  .card {
+    display: inline-block;
+    max-width: 32%;
+  }
+
+  .card-body {
+    width: auto;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  .card {
+    display: inline-block;
+    max-width: 32.55%;
+  }
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+  }
+
+  .card {
+    width: 33%;
   }
 }
